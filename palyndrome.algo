@@ -1,0 +1,40 @@
+ALGORITHM palindrome
+FUNCTION palynd(ch:STRING) : BOOLEAN
+VAR
+    n,i,j:INTEGER
+    pal:BOOLEAN
+BEGIN
+    n <--longueur(ch);
+    pal<--true;
+    i=1;
+    j=n;
+    
+        IF (n==0 || n==1) THEN // Base Case
+            pal=true;
+        ELSE
+        i=i+1;
+        j=j-1;
+
+           IF (i<=n div 2) et (ch[i]==ch[j]) THEN
+           pal=true;
+           ELSE
+           pal=false;
+           END_IF
+        END_IF
+     RETURN palynd ;
+END
+
+VAR
+    ch:STRING
+    pal:BOOLEAN
+
+BEGIN
+   write ("Donner votre ch:");
+   read (ch);
+   write ('Le mot écrit est un palindrome',palynd(ch))
+    
+END        
+           
+    
+   
+   
